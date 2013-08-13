@@ -2,13 +2,13 @@ class Bob(object):
   def hey(self, message):
     analysis = VoiceAnalysis(message)
 
-    if(analysis.is_quiet()):
+    if analysis.is_quiet():
       return "Fine. Be that way."
 
-    elif(analysis.is_shout()):
+    elif analysis.is_shout():
       return "Woah, chill out!"
 
-    elif(analysis.is_question()):
+    elif analysis.is_question():
       return "Sure."
 
     else:
