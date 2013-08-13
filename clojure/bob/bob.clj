@@ -2,7 +2,7 @@
   (use [clojure.string :only (blank? split upper-case)]))
 
 (defn quiet? [message] (blank? message))
-(defn question? [message] (= "?" (last (split message #""))))
+(defn question? [message] (= \? (last message)))
 (defn loud? [message] (= (upper-case message) message))
 
 
