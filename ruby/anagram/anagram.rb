@@ -1,8 +1,8 @@
 class String
 
   def anagram_of?(word)
-    return false if word.downcase == downcase
-    word.downcase.chars.sort == downcase.chars.sort 
+    return false if word.downcase == self.downcase
+    word.downcase.chars.sort == self.downcase.chars.sort 
   end
 
 end
