@@ -14,6 +14,6 @@ class Phrase
   private
 
   def words
-    @string.scan(/\w+/)
+    @words ||= @string.scan(/\w+/)
   end
 end

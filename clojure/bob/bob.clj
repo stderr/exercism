@@ -1,9 +1,9 @@
 (ns bob
   (use [clojure.string :only (blank? split upper-case)]))
 
-(defn quiet? [message] (blank? message))
-(defn question? [message] (= \? (last message)))
-(defn loud? [message] (= (upper-case message) message))
+(defn- quiet? [message] (blank? message))
+(defn- question? [message] (= \? (last message)))
+(defn- loud? [message] (= (upper-case message) message))
 
 
 (defn response-for [message]
