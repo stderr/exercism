@@ -1,2 +1,7 @@
 (ns dna)
-(defn to-rna [dna] (clojure.string/replace dna #"T" "U"))
+
+(let [thymine \T uracil \U]
+  (defn to-rna [dna] 
+    (clojure.string/replace dna thymine uracil)
+  )
+)
