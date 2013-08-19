@@ -2,17 +2,14 @@ class Bob(object):
   def hey(self, message):
     voice = VoiceAnalysis(message)
 
-    if voice.quiet():
+    if voice.is_quiet():
       return "Fine. Be that way."
-
-    elif voice.is_shout():
+    if voice.is_shout():
       return "Woah, chill out!"
-
-    elif voice.is_question():
+    if voice.is_question():
       return "Sure."
 
-    else:
-     return "Whatever."
+    return "Whatever."
 
 
 class VoiceAnalysis(object):
@@ -20,7 +17,7 @@ class VoiceAnalysis(object):
     self.speech = speech
 
   def is_quiet(self):
-    return bool(self.speech)
+    return not self.speech
 
   def is_shout(self):
     return self.speech.isupper()
